@@ -11,6 +11,22 @@ var tempc;
 var rannumber;
 var rannumber2;
 var imgtext;
+
+var password = "lemmie"; // because ANYONE CAN SEE THIS IN VIEW SOURCE!
+
+
+// Repeatedly prompt for user password until success:
+(function promptPass() {
+
+  var psw = prompt("Enter your Password");
+
+  while (psw !== password) {
+    alert("Incorrect Password");
+    return promptPass();
+  }
+
+}());
+
 var hotlines = [];
 hotlines[0] = "'GOO GOO GAA' *Sweats*";
 hotlines[1] = "Lemmie does not like this hot weather but will take it";
